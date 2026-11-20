@@ -23,3 +23,17 @@ If saving fails, make the "data" and "uploads" folders writable (permission 755 
 15-30% CPU 
 70-125 MB RAM 
 100-150 MB Disk
+linux +++++++++++++++++===========
+sudo apt install php php-cli php-curl php-mbstring php-gd -y
+
+# 2. Zip extract karo
+cd /home/mrtome/Downloads/WEBSxPANEL/        # jahan www.zip hai
+unzip www.zip
+cd www
+
+# 3. data aur uploads folder writable karo (settings save hone ke liye)
+mkdir -p data uploads/custom
+chmod -R 775 data uploads
+
+# 4. Server chalao
+php -S localhost:8080
