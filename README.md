@@ -28,12 +28,12 @@ If saving fails, make the "data" and "uploads" folders writable (permission 755 
 
 # 2. Zip extract 
 ```cd /home/mrtome/Downloads/WEBSxPANEL/```
-```unzip www.zip
-cd www```
+```unzip www.zip```
+```cd www```
 
-# 3. data and uploads folder writable (for settings save )
-```mkdir -p data uploads/custom
-chmod -R 775 data uploads```
+# 3 data and uploads folder writable (for settings save )
+mkdir -p data uploads/custom
+```chmod -R 775 data uploads```
 
-# 4. Server on
-php -S localhost:8080
+4. Server on
+```php -S localhost:8080```
