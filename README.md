@@ -32,7 +32,7 @@ If saving fails, make the "data" and "uploads" folders writable (permission 755 
 ```cd www```
 
 # 3 data and uploads folder writable (for settings save )
-mkdir -p data uploads/custom
+```mkdir -p data uploads/custom```
 ```chmod -R 775 data uploads```
 
 4. Server on
