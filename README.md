@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>⚡ BrutMC — Minecraft Server Website & Live Admin Customizer</h1>
+  <h1>⚡ WEBCODE — Minecraft Server Website & Live Admin Customizer</h1>
   <p>
     A sleek, lightweight, database-free PHP web template and real-time visual customizer built specifically for Minecraft servers.
   </p>
