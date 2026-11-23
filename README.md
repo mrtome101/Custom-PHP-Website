@@ -1,39 +1,44 @@
-TOME SITE (Pterodactyl "Nginx + PHP" egg)
+<div align="center">
 
-FIRST INSTALL
-1. Panel > Files: open your webroot folder (usually "webroot" or "www") and delete the old files.
-2. Upload tome-site.zip there and click Unarchive.
-   Put ALL files directly in the webroot (index.php and the admin folder must sit side by side).
-3. Restart the server.
-4. Site:  http://YOUR-IP:PORT/
-   Admin: http://YOUR-IP:PORT/admin/
+  <h1>⚡ BrutMC — Minecraft Server Website & Live Admin Customizer</h1>
+  <p>
+    A sleek, lightweight, database-free PHP web template and real-time visual customizer built specifically for Minecraft servers.
+  </p>
 
-LOGIN
-Default login is   user: admin   pass: admin
-To change it, open  admin/password.php  in the panel File Manager, edit the two lines, save. Done.
-(Please change the default password!)
+  <p>
+    <img src="https://img.shields.io/badge/PHP-8.1%2B-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8.1+" />
+    <img src="https://img.shields.io/badge/Database-None%20(JSON)-10B981?style=for-the-badge&logo=json&logoColor=white" alt="JSON Storage" />
+    <img src="https://img.shields.io/badge/Pterodactyl-Ready-00B4D8?style=for-the-badge" alt="Pterodactyl Ready" />
+    <img src="https://img.shields.io/badge/Mobile%20%26%20PC-Preview-A3E635?style=for-the-badge" alt="Responsive Preview" />
+  </p>
 
-UPDATING
-Upload and Unarchive over the old files. Your saved settings (data/settings.json) and uploaded
-images (uploads/custom) are not in the zip, so they stay. admin/password.php IS in the zip, so
-back up your edited copy first, or just edit it again after updating.
+</div>
 
-If saving fails, make the "data" and "uploads" folders writable (permission 755 or 775).
-🌟 Warning you need minimum 
-15-30% CPU 
-70-125 MB RAM 
-100-150 MB Disk
-# linux 
-```sudo apt install php php-cli php-curl php-mbstring php-gd -y```
+---
 
-# 2. Zip extract 
-```cd /home/mrtome/Downloads/WEBSxPANEL/```
-```unzip www.zip```
-```cd www```
+## ✨ Features
 
-# 3 data and uploads folder writable (for settings save )
-```mkdir -p data uploads/custom```
-```chmod -R 775 data uploads```
+* **🎨 Live Visual Customizer (`/admin/`):** Change primary colors, background tones, fonts, and logo sizes with an instant side-by-side live preview before saving[cite: 28, 49].
+* **📱🖥️ Mobile & PC View Switcher:** Built-in responsive preview toggle inside the Admin Panel so you can inspect both mobile and 1280px desktop layouts in real time[cite: 49].
+* **🚀 Zero Database Required:** All configurations, texts, rules, and staff profiles are stored cleanly in `data/settings.json`—no MySQL setup needed[cite: 22, 23].
+* **👥 Interactive Staff Roster & Profile GUI:** Manage staff ranks, custom 3D Minecraft skins, profile banners, Discord handles, and bios directly from the panel[cite: 21, 28].
+* **📜 Dynamic Rules & Vote Pages:** Add unlimited rule sections with custom icons and color highlights (`[[text]]` & `**bold**`), plus customizable vote links[cite: 20, 21, 28].
+* **🌐 Live Server & Discord Status:** Real-time player count and Discord online member counter with automatic proxy fallbacks[cite: 8, 43].
+* **✨ Interactive Particle Backgrounds & Effects:** Customizable `tsParticles` background network, announcement banner bar, and one-click maintenance mode[cite: 21, 28, 35].
 
-4. Server on
-```php -S localhost:8080```
+---
+
+## 📂 Project Structure
+
+```text
+www/
+├── admin/              # Admin dashboard, live preview, themes & auth config
+├── core/               # Vendor libraries (FontAwesome, jQuery, Prism)
+├── custom/templates/   # Cobalt-inspired dark UI stylesheets & particle scripts
+├── data/               # JSON configuration files (defaults.json & settings.json)
+├── inc/                # Core PHP helpers, content renderers & editable fields
+├── rules/              # Clean URL routing for /rules/
+├── staff/              # Clean URL routing for /staff/
+├── vote/               # Clean URL routing for /vote/
+├── uploads/            # Logos, banners, favicons & custom admin uploads
+└── index.php           # Main landing & news page
